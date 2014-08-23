@@ -1,3 +1,11 @@
+/******************************************************************************
+   Filename: Battlefield.h
+
+     Author: David C. Drake (http://davidcdrake.com)
+
+Description: Declaration of a 'Battlefield' class.
+******************************************************************************/
+
 #ifndef BATTLEFIELD_H
 #define BATTLEFIELD_H
 

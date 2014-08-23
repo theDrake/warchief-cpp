@@ -1,12 +1,12 @@
-//*****************************************************************************
-//	  Filename: main.cpp
-//
-//	    Author: David C. Drake (www.davidcdrake.com)
-//
-// Description: Main file for "Warchief": a strategy-RPG based on the tabletop
-//              battle game "Fantasy Warriors" by Nick Lund of Grenadier
-//              Models.
-//*****************************************************************************
+/******************************************************************************
+   Filename: main.cpp
+
+     Author: David C. Drake (http://davidcdrake.com), with initial assistance
+             from Dr. Barton Stander (http://cit.dixie.edu/faculty/stander.php)
+
+Description: Main file for "Warchief," a strategy-RPG based on the tabletop war
+             game "Fantasy Warriors" by Nick Lund of Grenadier Models.
+******************************************************************************/
 
 #include "main.h"
 

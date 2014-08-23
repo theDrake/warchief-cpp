@@ -1,3 +1,11 @@
+/******************************************************************************
+   Filename: Battlefield.cpp
+
+     Author: David C. Drake (http://davidcdrake.com)
+
+Description: Definition of a 'Battlefield' class.
+******************************************************************************/
+
 #include "Battlefield.h"
 
 const int    DEFAULT_PERSPECTIVE	 = FIRST_PERSON;

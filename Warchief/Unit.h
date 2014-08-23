@@ -1,3 +1,11 @@
+/******************************************************************************
+   Filename: Unit.h
+
+     Author: David C. Drake (http://davidcdrake.com)
+
+Description: Declaration of a 'Unit' class.
+******************************************************************************/
+
 #ifndef UNIT_H
 #define UNIT_H
 

@@ -1,3 +1,11 @@
+/******************************************************************************
+   Filename: Command.h
+
+     Author: David C. Drake (http://davidcdrake.com)
+
+Description: Declaration of a 'Command' class.
+******************************************************************************/
+
 #ifndef COMMAND_H
 #define COMMAND_H
 

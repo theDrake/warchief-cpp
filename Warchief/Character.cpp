@@ -1,11 +1,11 @@
-//*****************************************************************************
-//	  Filename: Character.cpp
-//
-//	    Author: David C. Drake (www.davidcdrake.com)
-//
-// Description: Definition of a 'Character' class responsible for representing
-//				      both player and non-player characters.
-//*****************************************************************************
+/******************************************************************************
+   Filename: Character.cpp
+
+     Author: David C. Drake (http://davidcdrake.com)
+
+Description: Definition of a 'Character' class responsible for representing
+             both player and non-player characters.
+******************************************************************************/
 
 #include "Character.h"
 

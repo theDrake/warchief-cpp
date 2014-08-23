@@ -1,11 +1,11 @@
-//*****************************************************************************
-//	  Filename: Character.h
-//
-//	    Author: David C. Drake (www.davidcdrake.com)
-//
-// Description: Declaration of a 'Character' class responsible for representing
-//				      both player and non-player characters.
-//*****************************************************************************
+/******************************************************************************
+   Filename: Character.h
+
+     Author: David C. Drake (http://davidcdrake.com)
+
+Description: Declaration of a 'Character' class responsible for representing
+             both player and non-player characters.
+******************************************************************************/
 
 #ifndef CHARACTER_H
 #define CHARACTER_H

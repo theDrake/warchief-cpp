@@ -5,7 +5,7 @@
              from Dr. Barton Stander (http://cit.dixie.edu/faculty/stander.php)
 
 Description: Main header file for "Warchief," a strategy-RPG based on the
-             tabletop war game "Fantasy Warriors" by Nick Lund of Grenadier
+             tabletop wargame "Fantasy Warriors" by Nick Lund of Grenadier
              Models.
 ******************************************************************************/
 

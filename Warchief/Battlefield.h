@@ -15,15 +15,14 @@ Description: Declaration of a 'Battlefield' class.
 
 using namespace std;
 
-const enum Lighting
+enum Lighting
 {
   DAY,
   NIGHT,
-
-  NUM_LIGHTING
+  NUM_LIGHTING_TYPES
 };
 
-const enum TerrainType
+enum TerrainType
 {
   DEFAULT_TERRAIN,
   LARGE_HILL,
@@ -33,7 +32,6 @@ const enum TerrainType
   BROKEN_GROUND,
   SWAMP,
   MARSH,
-
   NUM_TERRAIN_TYPES
 };
 

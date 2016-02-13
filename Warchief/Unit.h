@@ -6,32 +6,29 @@
 Description: Declaration of a 'Unit' class.
 ******************************************************************************/
 
-#ifndef UNIT_H
-#define UNIT_H
+#ifndef UNIT_H_
+#define UNIT_H_
 
 #include <vector>
 #include "Character.h"
 
 using namespace std;
 
-const enum Morale
-{
+const enum Morale {
   OK,
   BLOODLUST,
   SHAKEN,
   ROUT,
-
   NUM_MORALE_TYPES
 };
 
-class Unit
-{
-public:
+class Unit {
+ public:
   Unit();
   ~Unit();
-private:
-  vector<Character*> warriors_;
+ private:
+  vector<Character *> warriors_;
   double rotation_;
 };
 
-#endif
+#endif  // UNIT_H_

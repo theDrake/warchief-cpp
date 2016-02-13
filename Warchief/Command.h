@@ -6,8 +6,8 @@
 Description: Declaration of a 'Command' class.
 ******************************************************************************/
 
-#ifndef COMMAND_H
-#define COMMAND_H
+#ifndef COMMAND_H_
+#define COMMAND_H_
 
 #include <vector>
 #include "Unit.h"
@@ -15,23 +15,20 @@ Description: Declaration of a 'Command' class.
 
 using namespace std;
 
-const enum Order
-{
+const enum Order {
   ATTACK,
   HOLD,
   OPPOSE,
-
   NUM_ORDERS
 };
 
-class Command
-{
-public:
+class Command {
+ public:
   Command();
   ~Command();
-private:
+ private:
   Character* leader_;  // The warchief or a battle leader.
   vector<Unit*> units_;
 };
 
-#endif
+#endif  // COMMAND_H_

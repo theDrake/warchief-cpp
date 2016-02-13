@@ -6,8 +6,8 @@
 Description: Declaration of an 'Army' class.
 ******************************************************************************/
 
-#ifndef ARMY_H
-#define ARMY_H
+#ifndef ARMY_H_
+#define ARMY_H_
 
 #include <vector>
 #include "Command.h"
@@ -15,15 +15,14 @@ Description: Declaration of an 'Army' class.
 
 using namespace std;
 
-class Army
-{
-public:
+class Army {
+ public:
   Army();
   ~Army();
-private:
+ private:
   int maxPoints_;
-  vector<Command*> commands_;
-  vector<Character*> individuals_;
+  vector<Command *> commands_;
+  vector<Character *> individuals_;
 };
 
-#endif
+#endif  // ARMY_H_

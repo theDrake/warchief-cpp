@@ -27,8 +27,8 @@ class Command {
   Command();
   ~Command();
  private:
-  Character* leader_;  // The warchief or a battle leader.
-  vector<Unit*> units_;
+  Character *leader_;  // The warchief or a battle leader.
+  vector<Unit *> units_;
 };
 
 #endif  // COMMAND_H_

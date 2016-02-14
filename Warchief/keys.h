@@ -41,7 +41,7 @@ Description: Improves on GLUT's handling of keyboard input.
 #define KEY_ENTER 13
 #define KEY_ESCAPE 27
 
-typedef void(*key_func) (int, int, int);
+typedef void (*key_func) (int, int, int);
 
 bool isKeyPressed(int key);
 void initKeyboard();

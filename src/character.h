@@ -21,7 +21,7 @@ const double kGravity = 0.004;
 
 class Battlefield;
 
-const enum Race {
+enum Race {
   kMan,
   kBarbarian,
   kAmazon,
@@ -41,7 +41,7 @@ const enum Race {
   kNumRaces
 };
 
-const enum Quality {
+enum Quality {
   kElite,
   kVeteran,
   kAverage,
@@ -50,7 +50,7 @@ const enum Quality {
   kNumQualityTypes
 };
 
-const enum Type {
+enum Type {
   kDisciplined,
   kTribal,
   kFanatic,
@@ -58,7 +58,7 @@ const enum Type {
   kNumCharacterTypes
 };
 
-const enum Armor {
+enum Armor {
   kNoArmor,
   kLightArmor,
   kMediumArmor,
@@ -67,7 +67,7 @@ const enum Armor {
   kNumArmorTypes
 };
 
-const enum Weapon {
+enum Weapon {
   kOneHanded,
   kTwoHanded,  // May not carry a shield.
   kSpear,  // May fight in two ranks.

@@ -114,10 +114,10 @@ void drawText(double x, double y, char *string) {
 //------------------------------------------------------------------------------
 
 void display(void) {
-  double fps = getFramesPerSecond();
+  double fps = GetFramesPerSecond();
   double spf = 1.0 / fps;
 
-  if (isKeyPressed(KEY_ESCAPE)) {
+  if (IsKeyPressed(KEY_ESCAPE)) {
     if (gBattlefield) {
       delete gBattlefield;
     }
@@ -126,58 +126,58 @@ void display(void) {
     }
     exit(0);
   }
-  if (isKeyPressed('p') || isKeyPressed('r')) {
+  if (IsKeyPressed('p') || IsKeyPressed('r')) {
     gPerspectiveKeyDown = true;
   } else if (gPerspectiveKeyDown) {
     gPerspectiveKeyDown = false;
-    if (gBattlefield->getPerspective() == FIRST_PERSON) {
+    if (gBattlefield->GetPerspective() == FIRST_PERSON) {
       gBattlefield->SetPerspective(PERCH);
     } else {
       gBattlefield->SetPerspective(FIRST_PERSON);
     }
     reshape(screenX, screenY);
   }
-  /*if (isKeyPressed(KEY_SPACE) && gPlayer->IsOnGround())
+  /*if (IsKeyPressed(KEY_SPACE) && gPlayer->IsOnGround())
   {
     gPlayer->jump();
   }*/
-  if (isKeyPressed(KEY_UP) || isKeyPressed('w')) {
+  if (IsKeyPressed(KEY_UP) || IsKeyPressed('w')) {
     gPlayer->MoveForward();
   }
-  if (isKeyPressed(KEY_DOWN) || isKeyPressed('s')) {
+  if (IsKeyPressed(KEY_DOWN) || IsKeyPressed('s')) {
     gPlayer->MoveBackward();
   }
-  if (isKeyPressed('z')) {
+  if (IsKeyPressed('z')) {
     gPlayer->StrafeLeft();
   }
-  if (isKeyPressed('c')) {
+  if (IsKeyPressed('c')) {
     gPlayer->StrafeRight();
   }
-  if (isKeyPressed(KEY_LEFT) || isKeyPressed('a')) {
+  if (IsKeyPressed(KEY_LEFT) || IsKeyPressed('a')) {
     gPlayer->RotateLeft();
   }
-  if (isKeyPressed(KEY_RIGHT) || isKeyPressed('d')) {
+  if (IsKeyPressed(KEY_RIGHT) || IsKeyPressed('d')) {
     gPlayer->RotateRight();
   }
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glEnable(GL_DEPTH_TEST);
   glLoadIdentity();
-  if (gBattlefield->getPerspective() == FIRST_PERSON) {
-    double tempX = gPlayer->getX() + cos(gPlayer->getRotation() * PI / 180);
-    double tempY = gPlayer->getY() + sin(gPlayer->getRotation() * PI / 180);
+  if (gBattlefield->GetPerspective() == FIRST_PERSON) {
+    double tempX = gPlayer->GetX() + cos(gPlayer->GetRotation() * PI / 180);
+    double tempY = gPlayer->GetY() + sin(gPlayer->GetRotation() * PI / 180);
     double tempZ = gBattlefield->GetZ(tempX, tempY);
     if (tempZ < gBattlefield->GetWaterHeight()) {
       tempZ = gBattlefield->GetWaterHeight();
     }
-    tempZ += gPlayer->getZOffset();
-    gluLookAt(gPlayer->getX(), gPlayer->getY(), gPlayer->GetZ(),
+    tempZ += gPlayer->GetZOffset();
+    gluLookAt(gPlayer->GetX(), gPlayer->GetY(), gPlayer->GetZ(),
               tempX, tempY, tempZ,
               0, 0, 1);
-  } else if (gBattlefield->getPerspective() == DIRECTLY_OVERHEAD) {
+  } else if (gBattlefield->GetPerspective() == DIRECTLY_OVERHEAD) {
     glDisable(GL_DEPTH_TEST);
-  } else if (gBattlefield->getPerspective() == PERCH) {
+  } else if (gBattlefield->GetPerspective() == PERCH) {
     gluLookAt(resolution / 2.0, -resolution / 2.0, resolution * 2 / 5,
-              gPlayer->getX(), gPlayer->getY(), gPlayer->GetZ(),
+              gPlayer->GetX(), gPlayer->GetY(), gPlayer->GetZ(),
               0, 0, 1);
   }
   gBattlefield->Draw();
@@ -190,7 +190,7 @@ void display(void) {
   if (gRightButtonDown) {
     gPlayer->RotateRight();
   }
-  if (gBattlefield->getPerspective() != FIRST_PERSON) {
+  if (gBattlefield->GetPerspective() != FIRST_PERSON) {
     gPlayer->Draw();
   }
   glutSwapBuffers();
@@ -205,11 +205,11 @@ void reshape(int w, int h) {
 
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  if (gBattlefield->getPerspective() == FIRST_PERSON) {
+  if (gBattlefield->GetPerspective() == FIRST_PERSON) {
     gluPerspective(35, (double) w / h, 0.1, resolution * 3);
-  } else if (gBattlefield->getPerspective() == DIRECTLY_OVERHEAD) {
+  } else if (gBattlefield->GetPerspective() == DIRECTLY_OVERHEAD) {
     gluOrtho2D(-0.5, resolution + 0.5, -0.5, resolution + 0.5);
-  } else if (gBattlefield->getPerspective() == PERCH) {
+  } else if (gBattlefield->GetPerspective() == PERCH) {
     gluPerspective(35, (double) w / h, 1, resolution * 3);
   }
   glMatrixMode(GL_MODELVIEW);
@@ -269,7 +269,7 @@ int diceRoll(int nDice) {
 
 void InitializeMyStuff() {
   gBattlefield = new Battlefield();
-  gPlayer = new Character(MAN, 0, gBattlefield);
+  gPlayer = new Character(kMan, 0, gBattlefield);
 }
 
 //------------------------------------------------------------------------------
@@ -293,10 +293,10 @@ int main(int argc, char **argv) {
   glutDisplayFunc(display);
   glutReshapeFunc(reshape);
   glutMouseFunc(mouse);
-  initKeyboard();
+  InitKeyboard();
   glColor3d(0, 0, 0);  // Foreground color.
   glClearColor(0.4, 0.4, 0.9, 0);  // Background color.
-  initializeMyStuff();
+  InitializeMyStuff();
   glutMainLoop();
   if (gBattlefield) {
     delete gBattlefield;

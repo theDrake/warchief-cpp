@@ -15,7 +15,7 @@ Description: Declaration of a 'Command' class.
 
 using namespace std;
 
-const enum Order {
+enum Order {
   kAttack,
   kHold,
   kOppose,

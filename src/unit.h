@@ -14,7 +14,7 @@ Description: Declaration of a 'Unit' class.
 
 using namespace std;
 
-const enum Morale {
+enum Morale {
   kOK,
   kBloodlust,
   kShaken,

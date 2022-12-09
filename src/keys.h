@@ -10,7 +10,7 @@ Description: Improves on GLUT's handling of keyboard input.
 #define KEYS_H_
 
 #include <cstdlib>
-#include "glut.h"
+#include <GL/glut.h>
 
 #define KEY_F1 (GLUT_KEY_F1 + 256)
 #define KEY_F2 (GLUT_KEY_F2 + 256)

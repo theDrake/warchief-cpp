@@ -14,7 +14,7 @@ Description: Main header file for "Warchief," a strategy-RPG based on the
 #include <cstdlib>
 #include <cmath>
 #include <cstring>
-#include "glut.h"
+#include <GL/glut.h>
 #include "keys.h"
 #include "battlefield.h"
 #include "character.h"
@@ -23,7 +23,7 @@ using namespace std;
 
 const double PI = 4.0 * atan(1.0);
 
-const enum Perspective {
+enum Perspective {
   FIRST_PERSON,
   DIRECTLY_OVERHEAD,
   PERCH,

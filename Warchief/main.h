@@ -1,12 +1,12 @@
-/******************************************************************************
+/*******************************************************************************
    Filename: main.h
 
-     Author: David C. Drake (http://davidcdrake.com)
+     Author: David C. Drake (https://davidcdrake.com)
 
 Description: Main header file for "Warchief," a strategy-RPG based on the
              tabletop wargame "Fantasy Warriors" by Nick Lund of Grenadier
              Models.
-******************************************************************************/
+*******************************************************************************/
 
 #ifndef MAIN_H_
 #define MAIN_H_
@@ -16,8 +16,8 @@ Description: Main header file for "Warchief," a strategy-RPG based on the
 #include <cstring>
 #include "glut.h"
 #include "keys.h"
-#include "Battlefield.h"
-#include "Character.h"
+#include "battlefield.h"
+#include "character.h"
 
 using namespace std;
 
@@ -34,7 +34,7 @@ void drawTriangle(double x1, double y1,
                   double x2, double y2,
                   double x3, double y3);
 void reshape(int w, int h);
-double getFramesPerSecond();
+double GetFramesPerSecond();
 int diceRoll(int nDice);
 
 #endif  // MAIN_H_

@@ -1,10 +1,10 @@
-/******************************************************************************
+/*******************************************************************************
    Filename: keys.h
 
-     Author: Rob Bateman, modified by David C. Drake (http://davidcdrake.com)
+     Author: Rob Bateman, modified by David C. Drake (https://davidcdrake.com)
 
 Description: Improves on GLUT's handling of keyboard input.
-******************************************************************************/
+*******************************************************************************/
 
 #ifndef KEYS_H_
 #define KEYS_H_
@@ -41,11 +41,11 @@ Description: Improves on GLUT's handling of keyboard input.
 #define KEY_ENTER 13
 #define KEY_ESCAPE 27
 
-typedef void (*key_func) (int, int, int);
+typedef void (*key_function) (int, int, int);
 
-bool isKeyPressed(int key);
-void initKeyboard();
-void setKeyboardFunc(key_func);
-void setKeyboardUpFunc(key_func);
+bool IsKeyPressed(int key);
+void InitKeyboard();
+void SetKeyboardFunc(key_function);
+void SetKeyboardUpFunc(key_function);
 
 #endif  // KEYS_H_

@@ -1,6 +1,6 @@
 all: warchief
 
-warchief: src
+warchief: src/*
 	g++ src/*.cc -lglut -lGL -lGLU -o warchief
 
 .PHONY: all clean
